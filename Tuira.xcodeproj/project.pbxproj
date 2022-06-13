@@ -17,6 +17,7 @@
 		C437CE1A28565E5200A8A3AB /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C437CE1928565E5200A8A3AB /* Builder.swift */; };
 		C437CE1C2856610500A8A3AB /* TweetBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C437CE1B2856610500A8A3AB /* TweetBuilder.swift */; };
 		C437CE1E28568A5900A8A3AB /* TweetDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C437CE1D28568A5900A8A3AB /* TweetDirector.swift */; };
+		C4E4AD772857AE6700B743F5 /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E4AD762857AE6700B743F5 /* ActionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		C437CE1928565E5200A8A3AB /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		C437CE1B2856610500A8A3AB /* TweetBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetBuilder.swift; sourceTree = "<group>"; };
 		C437CE1D28568A5900A8A3AB /* TweetDirector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDirector.swift; sourceTree = "<group>"; };
+		C4E4AD762857AE6700B743F5 /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		C437CE182856565500A8A3AB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C4E4AD762857AE6700B743F5 /* ActionsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				C437CE1C2856610500A8A3AB /* TweetBuilder.swift in Sources */,
 				C437CE042856510F00A8A3AB /* TuiraApp.swift in Sources */,
 				C437CE1E28568A5900A8A3AB /* TweetDirector.swift in Sources */,
+				C4E4AD772857AE6700B743F5 /* ActionsView.swift in Sources */,
 				C437CE172856542900A8A3AB /* TweetDatabase.swift in Sources */,
 				C437CE132856516B00A8A3AB /* User.swift in Sources */,
 				C437CE152856525200A8A3AB /* Tweet.swift in Sources */,

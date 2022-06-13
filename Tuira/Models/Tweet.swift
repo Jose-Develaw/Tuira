@@ -12,8 +12,7 @@ class Tweet : ObservableObject, Identifiable, NSCopying {
    
     var user : User?
     var published : Date?
-    @Published var numberOfLikes : Int = 0
-    @Published var numberOfRetweets : Int = 0
+    
     var isAd : Bool = false
     var numberOfComments : Int { comments?.count ?? 0 }
     var isCommentOf : ObjectIdentifier?
@@ -22,6 +21,11 @@ class Tweet : ObservableObject, Identifiable, NSCopying {
     var text : String?
     var image : UIImage?
     var video : AVPlayer?
+    
+    @Published var numberOfLikes : Int = 0
+    @Published var numberOfRetweets : Int = 0
+    @Published var likedByUser : Bool = false
+    @Published var retweetedByUser : Bool = false
     
     init(){}
     

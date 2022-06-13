@@ -49,6 +49,7 @@ struct ContentView: View {
                                         .bold()
                                     if tweet.user!.isVerified {
                                         Image(systemName: "checkmark.seal.fill")
+                                            .foregroundColor(Color(red: 29/255, green: 161/255, blue: 242/255))
                                     }
                                     Text("@\(tweet.user!.atName)")
                                         .foregroundColor(Color.secondary)
@@ -60,36 +61,25 @@ struct ContentView: View {
                                             .foregroundColor(.secondary)
                                     }
                                     
-                                    
                                 }
+                                
                                 Text(tweet.text ?? "")
+                                    .font(.callout)
                                 if let image = tweet.image {
                                     Image(uiImage: image)
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(maxWidth: 350, maxHeight: 250)
                                         .cornerRadius(15)
                                 }
                                 
                                 if let video = tweet.video {
                                     VideoPlayer(player: video)
-                                        .frame(height: 200)
+                                        .frame(height: 300)
                                         .cornerRadius(15)
                                 }
                                 
                                 //Actions
-                                HStack (alignment: .center){
-                                    Image(systemName: "bubble.right")
-                                    Spacer()
-                                    Image(systemName: "arrow.2.squarepath")
-                                    Spacer()
-                                    Image(systemName: "heart")
-                                    Spacer()
-                                    Image(systemName: "square.and.arrow.up")
-                                    Spacer()
-                                        
-                                }
-                                .padding(.vertical, 3)
+                                ActionsView(tweet: tweet)
                                 
                                 if tweet.isAd {
                                     HStack (spacing: 1){
