@@ -9,8 +9,6 @@ import SwiftUI
 import AVFoundation
 
 class TweetBuilder : Builder {
-   
-    
     
     private var tweet : Tweet
     
@@ -54,6 +52,21 @@ class TweetBuilder : Builder {
     
     func isAdd(_ isAd: Bool) -> Self {
         tweet.isAd = isAd
+        return self
+    }
+    
+    func withComments(_ number: Int) -> Self {
+        tweet.numberOfComments = number
+        return self
+    }
+    
+    func withLikes(_ number: Int) -> Self {
+        tweet.numberOfLikes = number
+        return self
+    }
+    
+    func withRetweets(_ number: Int) -> Self {
+        tweet.numberOfRetweets = number
         return self
     }
     

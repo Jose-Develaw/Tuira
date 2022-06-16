@@ -39,22 +39,25 @@ class TweetDatabase {
         
         let tweet = tweetBuilder
             .withUser(user)
-            .withText("Example text")
+            .withText("Example text @JoseDevelaw")
             .withVideo(player)
+            .withRetweets(3)
             .isAdd(true)
             .build()
         
         let tweet2 = tweetBuilder
             .withUser(user)
             .retweetedBy(user2)
-            .withText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation")
+            .withLikes(7)
+            .withText("Lorem ipsum dolor sit amet, #consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et #dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation")
             .build()
         
         let tweet3 = tweetBuilder
             .withUser(user2)
             .isCommentOf(tweet2.id)
             .withImage(braisImage!)
-            .withText("Yet another amazing tweet for testing purposes")
+            .withComments(3)
+            .withText("Yet another amazing #tweet for testing purposes")
             .build()
         
         allTweets.append(contentsOf: [tweet, tweet2, tweet3])

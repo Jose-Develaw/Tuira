@@ -20,5 +20,8 @@ protocol Builder {
     func withImage(_ image: UIImage) -> Self
     func withVideo(_ video: AVPlayer) -> Self
     func isAdd(_ isAd: Bool) -> Self
+    func withComments(_ number: Int) -> Self
+    func withLikes(_ number: Int) -> Self
+    func withRetweets(_ number: Int) -> Self
     
 }

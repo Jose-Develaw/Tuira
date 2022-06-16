@@ -14,7 +14,7 @@ class Tweet : ObservableObject, Identifiable, NSCopying {
     var published : Date?
     
     var isAd : Bool = false
-    var numberOfComments : Int { comments?.count ?? 0 }
+
     var isCommentOf : ObjectIdentifier?
     var comments : [Tweet]?
     var retweetedBy : User?
@@ -23,6 +23,7 @@ class Tweet : ObservableObject, Identifiable, NSCopying {
     var video : AVPlayer?
     
     @Published var numberOfLikes : Int = 0
+    @Published var numberOfComments  : Int = 0
     @Published var numberOfRetweets : Int = 0
     @Published var likedByUser : Bool = false
     @Published var retweetedByUser : Bool = false
@@ -39,6 +40,9 @@ class Tweet : ObservableObject, Identifiable, NSCopying {
         tweet.image = self.image
         tweet.video = self.video
         tweet.isAd = self.isAd
+        tweet.numberOfLikes = self.numberOfLikes
+        tweet.numberOfRetweets = self.numberOfRetweets
+        tweet.numberOfComments = self.numberOfComments
         
         return tweet
     }

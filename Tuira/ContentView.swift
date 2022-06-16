@@ -12,10 +12,7 @@ struct Separator: View {
     
     var body: some View {
                Divider()
-                    .frame(height: 0.3)
-                    .overlay(.secondary)
                     .padding(.top, 2)
-                    .padding(.horizontal, 10)
     }
 }
 
@@ -23,6 +20,7 @@ struct ContentView: View {
     
     @State var tweets = [Tweet]()
     private let gridItemLayout = [GridItem(.adaptive(minimum: 360, maximum: .infinity))]
+
     
     var body: some View {
         ScrollView {
@@ -49,7 +47,7 @@ struct ContentView: View {
                                         .bold()
                                     if tweet.user!.isVerified {
                                         Image(systemName: "checkmark.seal.fill")
-                                            .foregroundColor(Color(red: 29/255, green: 161/255, blue: 242/255))
+                                            .foregroundColor(.twitterBlue)
                                     }
                                     Text("@\(tweet.user!.atName)")
                                         .foregroundColor(Color.secondary)
@@ -63,8 +61,7 @@ struct ContentView: View {
                                     
                                 }
                                 
-                                Text(tweet.text ?? "")
-                                    .font(.callout)
+                                TweetText(tweet: tweet)
                                 if let image = tweet.image {
                                     Image(uiImage: image)
                                         .resizable()

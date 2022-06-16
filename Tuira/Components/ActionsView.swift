@@ -14,11 +14,16 @@ struct ActionsView: View {
     var body: some View {
         HStack (alignment: .center, spacing: 1){
             Group{
-                Image(systemName: "bubble.right")
-                if (tweet.numberOfComments > 0){
-                    Text(tweet.numberOfComments.formatted(.number))
+                Button {
                     
+                } label: {
+                    Image(systemName: "bubble.right")
+                        .foregroundColor(tweet.retweetedByUser ? .green : .secondary)
                 }
+                Text(tweet.numberOfComments.formatted(.number))
+                        .font(.caption.monospacedDigit())
+                        .foregroundColor(tweet.numberOfComments <= 0 ? .secondary.opacity(0) : .secondary)
+                
                 Spacer()
                 Button {
                     withAnimation{
@@ -60,6 +65,7 @@ struct ActionsView: View {
                 Spacer()
             }
             Image(systemName: "square.and.arrow.up")
+                .foregroundColor(.secondary)
             Spacer()
         }
         .padding(.vertical, 3)
