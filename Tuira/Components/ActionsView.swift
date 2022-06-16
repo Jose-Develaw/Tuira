@@ -18,7 +18,7 @@ struct ActionsView: View {
                     
                 } label: {
                     Image(systemName: "bubble.right")
-                        .foregroundColor(tweet.retweetedByUser ? .green : .secondary)
+                        .foregroundColor(.secondary)
                 }
                 Text(tweet.numberOfComments.formatted(.number))
                         .font(.caption.monospacedDigit())

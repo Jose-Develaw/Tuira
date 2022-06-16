@@ -25,41 +25,41 @@ class TweetDatabase {
         let profilePic = UIImage(named: "JoseDevelaw")!
         let braisImage = UIImage(named: "Brais")
         
-        
         //For tweet with video
         let videoUrl: String = "https://bit.ly/swswift"
         let player = AVPlayer(url: URL(string: videoUrl)!)
         
-        let user = User(displayName: "José", atName: "JoseDevelaw")
+        let user = User(displayName: "José", atName: "JoseDevelaw", isVerified: true)
         user.profilePic = profilePic
         
-        let user2 = User(displayName: "Other", atName: "Od", isVerified: true)
+        let user2 = User(displayName: "Other", atName: "Od")
         
         let tweetBuilder = TweetBuilder()
         
-        let tweet = tweetBuilder
+        allTweets.append(contentsOf: [
+        
+         tweetBuilder
             .withUser(user)
             .withText("Example text @JoseDevelaw")
             .withVideo(player)
             .withRetweets(3)
             .isAdd(true)
-            .build()
+            .build(),
         
-        let tweet2 = tweetBuilder
+        tweetBuilder
             .withUser(user)
             .retweetedBy(user2)
             .withLikes(7)
             .withText("Lorem ipsum dolor sit amet, #consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et #dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation")
-            .build()
+            .build(),
         
-        let tweet3 = tweetBuilder
+        tweetBuilder
             .withUser(user2)
-            .isCommentOf(tweet2.id)
             .withImage(braisImage!)
             .withComments(3)
             .withText("Yet another amazing #tweet for testing purposes")
             .build()
-        
-        allTweets.append(contentsOf: [tweet, tweet2, tweet3])
+            
+        ])
     }
 }

@@ -20,6 +20,7 @@
 		C472D76E285B203E0073B5E1 /* TweetText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472D76D285B203E0073B5E1 /* TweetText.swift */; };
 		C472D770285B20F70073B5E1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C472D76F285B20F70073B5E1 /* Colors.xcassets */; };
 		C472D772285B22220073B5E1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472D771285B22220073B5E1 /* ColorExtension.swift */; };
+		C472D774285B24FD0073B5E1 /* TweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472D773285B24FD0073B5E1 /* TweetView.swift */; };
 		C4E4AD772857AE6700B743F5 /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E4AD762857AE6700B743F5 /* ActionsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		C472D76D285B203E0073B5E1 /* TweetText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetText.swift; sourceTree = "<group>"; };
 		C472D76F285B20F70073B5E1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C472D771285B22220073B5E1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		C472D773285B24FD0073B5E1 /* TweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetView.swift; sourceTree = "<group>"; };
 		C4E4AD762857AE6700B743F5 /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 			children = (
 				C4E4AD762857AE6700B743F5 /* ActionsView.swift */,
 				C472D76D285B203E0073B5E1 /* TweetText.swift */,
+				C472D773285B24FD0073B5E1 /* TweetView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				C437CE152856525200A8A3AB /* Tweet.swift in Sources */,
 				C472D76E285B203E0073B5E1 /* TweetText.swift in Sources */,
 				C472D772285B22220073B5E1 /* ColorExtension.swift in Sources */,
+				C472D774285B24FD0073B5E1 /* TweetView.swift in Sources */,
 				C437CE1A28565E5200A8A3AB /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

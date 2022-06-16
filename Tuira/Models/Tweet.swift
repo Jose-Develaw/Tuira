@@ -43,6 +43,7 @@ class Tweet : ObservableObject, Identifiable, NSCopying {
         tweet.numberOfLikes = self.numberOfLikes
         tweet.numberOfRetweets = self.numberOfRetweets
         tweet.numberOfComments = self.numberOfComments
+        tweet.retweetedBy = self.retweetedBy
         
         return tweet
     }

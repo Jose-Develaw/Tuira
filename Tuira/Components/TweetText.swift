@@ -16,9 +16,9 @@ struct TweetText: View {
         var output: Text = Text("")
 
         for word in words {
-            if word.hasPrefix("#") || word.hasPrefix("@") { // Pick out hash in words
+            if word.hasPrefix("#") || word.hasPrefix("@") {
                 output = output + Text(" ") + Text(String(word))
-                    .foregroundColor(color) // Add custom styling here
+                    .foregroundColor(color)
             } else {
                 output = output + Text(" ") + Text(String(word))
             }
