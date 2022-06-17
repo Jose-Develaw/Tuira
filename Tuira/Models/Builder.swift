@@ -14,6 +14,7 @@ protocol Builder {
     
     func reset() -> Void
     func withUser(_ user: User) -> Self
+    func wasPublishedOn(_ date: Date) -> Self
     func retweetedBy(_ user: User) -> Self
     func isCommentOf(_ isCommentOf: ObjectIdentifier) -> Self
     func withText(_ text: String) -> Self

@@ -34,12 +34,19 @@ class TweetDatabase {
         
         let user2 = User(displayName: "Other", atName: "Od")
         
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let someDateTime = formatter.date(from: "2022/06/08 22:31")
+        let someDateTime2 = formatter.date(from: "2022/06/13 22:31")
+        let someDateTime3 = formatter.date(from: "2022/06/15 22:31")
+        
         let tweetBuilder = TweetBuilder()
         
         allTweets.append(contentsOf: [
         
          tweetBuilder
             .withUser(user)
+            .wasPublishedOn(someDateTime!)
             .withText("Example text @JoseDevelaw")
             .withVideo(player)
             .withRetweets(3)
@@ -48,6 +55,7 @@ class TweetDatabase {
         
         tweetBuilder
             .withUser(user)
+            .wasPublishedOn(someDateTime2!)
             .retweetedBy(user2)
             .withLikes(7)
             .withText("Lorem ipsum dolor sit amet, #consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et #dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation")
@@ -55,6 +63,7 @@ class TweetDatabase {
         
         tweetBuilder
             .withUser(user2)
+            .wasPublishedOn(someDateTime3!)
             .withImage(braisImage!)
             .withComments(3)
             .withText("Yet another amazing #tweet for testing purposes")

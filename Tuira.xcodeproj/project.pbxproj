@@ -21,6 +21,8 @@
 		C472D770285B20F70073B5E1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C472D76F285B20F70073B5E1 /* Colors.xcassets */; };
 		C472D772285B22220073B5E1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472D771285B22220073B5E1 /* ColorExtension.swift */; };
 		C472D774285B24FD0073B5E1 /* TweetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472D773285B24FD0073B5E1 /* TweetView.swift */; };
+		C472D776285B425B0073B5E1 /* TabbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472D775285B425B0073B5E1 /* TabbarButton.swift */; };
+		C472D778285C1BBC0073B5E1 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472D777285C1BBC0073B5E1 /* DateExtension.swift */; };
 		C4E4AD772857AE6700B743F5 /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E4AD762857AE6700B743F5 /* ActionsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		C472D76F285B20F70073B5E1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C472D771285B22220073B5E1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		C472D773285B24FD0073B5E1 /* TweetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetView.swift; sourceTree = "<group>"; };
+		C472D775285B425B0073B5E1 /* TabbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarButton.swift; sourceTree = "<group>"; };
+		C472D777285C1BBC0073B5E1 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		C4E4AD762857AE6700B743F5 /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +85,7 @@
 				C472D76F285B20F70073B5E1 /* Colors.xcassets */,
 				C437CE092856511000A8A3AB /* Preview Content */,
 				C472D771285B22220073B5E1 /* ColorExtension.swift */,
+				C472D777285C1BBC0073B5E1 /* DateExtension.swift */,
 			);
 			path = Tuira;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 				C4E4AD762857AE6700B743F5 /* ActionsView.swift */,
 				C472D76D285B203E0073B5E1 /* TweetText.swift */,
 				C472D773285B24FD0073B5E1 /* TweetView.swift */,
+				C472D775285B425B0073B5E1 /* TabbarButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C437CE062856510F00A8A3AB /* ContentView.swift in Sources */,
+				C472D778285C1BBC0073B5E1 /* DateExtension.swift in Sources */,
 				C437CE1C2856610500A8A3AB /* TweetBuilder.swift in Sources */,
 				C437CE042856510F00A8A3AB /* TuiraApp.swift in Sources */,
 				C437CE1E28568A5900A8A3AB /* TweetDirector.swift in Sources */,
@@ -196,6 +203,7 @@
 				C437CE132856516B00A8A3AB /* User.swift in Sources */,
 				C437CE152856525200A8A3AB /* Tweet.swift in Sources */,
 				C472D76E285B203E0073B5E1 /* TweetText.swift in Sources */,
+				C472D776285B425B0073B5E1 /* TabbarButton.swift in Sources */,
 				C472D772285B22220073B5E1 /* ColorExtension.swift in Sources */,
 				C472D774285B24FD0073B5E1 /* TweetView.swift in Sources */,
 				C437CE1A28565E5200A8A3AB /* Builder.swift in Sources */,

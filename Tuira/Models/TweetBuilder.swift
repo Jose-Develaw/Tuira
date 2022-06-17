@@ -10,6 +10,7 @@ import AVFoundation
 
 class TweetBuilder : Builder {
     
+    
     private var tweet : Tweet
     
     init(){
@@ -22,6 +23,11 @@ class TweetBuilder : Builder {
     
     func withUser(_ user: User) -> Self {
         tweet.user = user
+        return self
+    }
+    
+    func wasPublishedOn(_ date: Date) -> Self {
+        tweet.published = date
         return self
     }
     

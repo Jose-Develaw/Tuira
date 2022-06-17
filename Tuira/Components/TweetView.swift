@@ -48,6 +48,10 @@ struct TweetView: View {
                         }
                         Text("@\(tweet.user!.atName)")
                             .foregroundColor(Color.secondary)
+                        if let published = tweet.published {
+                            Text("· \(published.timeAgoDisplay())")
+                                .foregroundColor(.secondary)
+                        }
                         Spacer()
                         Button {
                             

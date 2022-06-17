@@ -16,13 +16,11 @@ struct Separator: View {
     }
 }
 
-struct ContentView: View {
-    
+struct HomeView: View {
     @State var tweets = [Tweet]()
-    
     var body: some View {
         ScrollView {
-            LazyVStack (){
+            LazyVStack (pinnedViews: [.sectionHeaders]){
                 ForEach (tweets, id: \.id) { tweet in
                     TweetView(tweet: tweet)
             }
@@ -30,6 +28,43 @@ struct ContentView: View {
         .onAppear(){
             TweetDatabase.seedTweets()
             tweets = TweetDatabase.getAllTweets()
+            }
+        }
+    }
+}
+
+struct ContentView: View {
+    
+    
+    @State private var selected = 1
+    
+    var body: some View {
+        ZStack(alignment: Alignment.bottom) {
+                    TabView(selection: $selected) {
+                        HomeView().tabItem {
+                            Text("") // < invisible tab item
+                        }.tag(1)
+                    }
+            HStack(alignment: .top){
+                Group{
+                        Spacer()
+                    TabbarButton(selected: $selected, systemImage: "house", selectionNumber: 1)
+                       
+                        Spacer()
+                    TabbarButton(selected: $selected, systemImage: "magnifyingglass.circle", selectionNumber: 2)
+                        Spacer()
+                }
+                Group{
+                    TabbarButton(selected: $selected, systemImage: "person.2", selectionNumber: 3)
+                        
+                        Spacer()
+                    TabbarButton(selected: $selected, systemImage: "bell", selectionNumber: 4)
+                        
+                        Spacer()
+                    TabbarButton(selected: $selected, systemImage: "envelope", selectionNumber: 5)
+                        
+                        Spacer()
+                }
             }
         }
     }
